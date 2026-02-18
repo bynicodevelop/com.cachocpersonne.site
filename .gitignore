@@ -1,0 +1,5 @@
+.env
+node_modules/
+ghost_content/
+mysql_data/
+.DS_Store
