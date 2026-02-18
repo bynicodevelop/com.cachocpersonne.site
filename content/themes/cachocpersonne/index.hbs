@@ -1,0 +1,31 @@
+{{!< default}}
+
+<main class="landing">
+    <div class="landing-content">
+        <h1 class="landing-title">{{@site.title}}</h1>
+        <p class="landing-description">{{@site.description}}</p>
+
+        <form class="signup-form" data-members-form="subscribe">
+            <div class="form-group">
+                <input
+                    class="form-input"
+                    type="email"
+                    data-members-email
+                    placeholder="ton@email.com"
+                    required
+                    autocomplete="email"
+                >
+                <button class="form-button" type="submit">
+                    <span class="button-text">Je veux savoir</span>
+                    <span class="button-loading">...</span>
+                </button>
+            </div>
+            <div class="form-message form-message-success">
+                C'est fait. Bienvenue dans le cercle.
+            </div>
+            <div class="form-message form-message-error">
+                Quelque chose a merd&eacute;. R&eacute;essaie.
+            </div>
+        </form>
+    </div>
+</main>
