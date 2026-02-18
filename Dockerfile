@@ -1,6 +1,8 @@
 FROM ghost:5-alpine
 
 ENV NODE_ENV=production
+ENV server__host=0.0.0.0
+ENV server__port=2368
 
 COPY content/themes/cachocpersonne /tmp/ghost-themes/cachocpersonne
 
