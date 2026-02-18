@@ -1,0 +1,13 @@
+{{!< default}}
+
+<article class="post">
+    <header class="post-header">
+        <a class="post-back" href="{{@site.url}}">&larr; Retour</a>
+        {{#if @page.show_title_and_feature_image}}
+            <h1 class="post-title">{{title}}</h1>
+        {{/if}}
+    </header>
+    <div class="post-content">
+        {{content}}
+    </div>
+</article>
