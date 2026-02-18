@@ -6,4 +6,4 @@ COPY content/themes/cachocpersonne /tmp/ghost-themes/cachocpersonne
 
 EXPOSE 2368
 
-CMD ["sh", "-c", "mkdir -p /var/lib/ghost/content/themes /var/lib/ghost/content/logs && rm -rf /var/lib/ghost/content/themes/cachocpersonne && cp -r /tmp/ghost-themes/cachocpersonne /var/lib/ghost/content/themes/cachocpersonne && cp -rn /var/lib/ghost/current/content/themes/source /var/lib/ghost/content/themes/source 2>/dev/null; if [ -z \"$url\" ]; then if [ -n \"$RAILWAY_PUBLIC_DOMAIN\" ]; then export url=\"https://$RAILWAY_PUBLIC_DOMAIN\"; else export url=\"http://localhost:2368\"; fi; fi && node current/index.js"]
+CMD ["sh", "-c", "mkdir -p /var/lib/ghost/content/themes /var/lib/ghost/content/logs && rm -rf /var/lib/ghost/content/themes/cachocpersonne && cp -r /tmp/ghost-themes/cachocpersonne /var/lib/ghost/content/themes/cachocpersonne && [ -d /var/lib/ghost/content/themes/source ] || cp -r /var/lib/ghost/current/content/themes/source /var/lib/ghost/content/themes/source; if [ -z \"$url\" ]; then if [ -n \"$RAILWAY_PUBLIC_DOMAIN\" ]; then export url=\"https://$RAILWAY_PUBLIC_DOMAIN\"; else export url=\"http://localhost:2368\"; fi; fi && node current/index.js"]
