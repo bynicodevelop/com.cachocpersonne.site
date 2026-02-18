@@ -1,9 +1,79 @@
 {{!< default}}
 
 <main class="landing">
-    <div class="landing-content">
-        <h1 class="landing-title">{{@site.title}}</h1>
-        <p class="landing-description">{{@site.description}}</p>
+
+    {{!-- Hero --}}
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Chaque seconde, la dette française augmente de 5&nbsp;000&nbsp;&euro;. Et personne ne bronche.</h1>
+            <p class="hero-subtitle">Chaque semaine, je dissèque une dépense publique que personne ne vous montre. Données sourcées, zéro blabla, en 5 minutes de lecture.</p>
+
+            <form class="signup-form" data-members-form="subscribe">
+                <div class="form-group">
+                    <input
+                        class="form-input"
+                        type="email"
+                        data-members-email
+                        placeholder="ton@email.com"
+                        required
+                        autocomplete="email"
+                    >
+                    <button class="form-button" type="submit">
+                        <span class="button-text">Recevoir le prochain chiffre</span>
+                        <span class="button-loading">...</span>
+                    </button>
+                </div>
+                <div class="form-message form-message-success">
+                    C'est fait. Bienvenue dans le cercle.
+                </div>
+                <div class="form-message form-message-error">
+                    Quelque chose a merdé. Réessaie.
+                </div>
+            </form>
+
+            <p class="social-proof">Rejoint par <span class="social-proof-count">{{@site.members_count}}</span> contribuables qui veulent savoir où passe leur argent</p>
+        </div>
+    </section>
+
+    {{!-- Valeur --}}
+    <section class="value">
+        <div class="value-grid">
+            <div class="value-card">
+                <span class="value-icon">&#128176;</span>
+                <h3 class="value-title">Un chiffre choc chaque semaine</h3>
+                <p class="value-text">Le gaspillage, la subvention absurde ou l'aberration budgétaire que les médias n'ont pas couverte. Avec la source.</p>
+            </div>
+            <div class="value-card">
+                <span class="value-icon">&#128202;</span>
+                <h3 class="value-title">Des comparaisons qui font mal</h3>
+                <p class="value-text">La France face à la Suisse, l'Allemagne, les Pays-Bas. Mêmes services publics, deux fois moins cher. Pourquoi ?</p>
+            </div>
+            <div class="value-card">
+                <span class="value-icon">&#127963;</span>
+                <h3 class="value-title">La Cour des Comptes en clair</h3>
+                <p class="value-text">Leurs rapports font 400 pages. Je vous en extrais les 5 minutes qui comptent.</p>
+            </div>
+        </div>
+    </section>
+
+    {{!-- Crédibilité --}}
+    <section class="credibility">
+        <p class="credibility-text">Toutes les données viennent de sources officielles&nbsp;: Cour des Comptes, INSEE, Eurostat, OCDE, rapports parlementaires. <strong>Pas d'opinion. Des faits.</strong></p>
+    </section>
+
+    {{!-- Aperçu --}}
+    <section class="preview">
+        <h2 class="preview-heading">Exemples de sujets récents</h2>
+        <ul class="preview-list">
+            <li class="preview-item">11,3 Mds&euro;/an pour l'apprentissage&nbsp;: le coût a triplé, personne n'a mesuré les résultats</li>
+            <li class="preview-item">198 Mds&euro; de dette locale&nbsp;: la carte des villes qui vivent à crédit</li>
+            <li class="preview-item">France vs Suisse&nbsp;: même budget santé, résultats opposés</li>
+        </ul>
+    </section>
+
+    {{!-- CTA final --}}
+    <section class="cta-final">
+        <p class="cta-final-text">Vous payez en moyenne <strong>45% d'impôts et de charges</strong>. Vous avez le droit de savoir ce qu'on en fait.</p>
 
         <form class="signup-form" data-members-form="subscribe">
             <div class="form-group">
@@ -16,7 +86,7 @@
                     autocomplete="email"
                 >
                 <button class="form-button" type="submit">
-                    <span class="button-text">Je veux savoir</span>
+                    <span class="button-text">Je veux savoir — c'est gratuit</span>
                     <span class="button-loading">...</span>
                 </button>
             </div>
@@ -24,8 +94,9 @@
                 C'est fait. Bienvenue dans le cercle.
             </div>
             <div class="form-message form-message-error">
-                Quelque chose a merd&eacute;. R&eacute;essaie.
+                Quelque chose a merdé. Réessaie.
             </div>
         </form>
-    </div>
+    </section>
+
 </main>
